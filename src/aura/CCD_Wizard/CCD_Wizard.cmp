@@ -1,0 +1,10 @@
+<aura:component description="CCD_Wizard" implements="forceCommunity:availableForAllPageTypes" extends="c:SS_uiWizard" access="global">
+    <aura:attribute name="wizardTitle" type="String" default="Create Case Wizard"></aura:attribute>
+    <aura:attribute name="startPage" type="String" default="step-1"></aura:attribute>
+    <aura:attribute name="pageMap" type="Map" default="{
+           'step-1' : {'key': 'step-1' , 'name': 'c:CCD_Step1',  'next': 'step-2'},
+           'step-2' : {'key': 'step-2' , 'name': 'c:CCD_Step2', 'prev': 'step-1', 'next': 'step-3'},
+           'step-3' : {'key': 'step-3' , 'name': 'c:CCD_Step3', 'prev': 'step-2'}
+       }">
+    </aura:attribute>
+</aura:component>

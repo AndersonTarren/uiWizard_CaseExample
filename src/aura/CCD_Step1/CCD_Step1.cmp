@@ -1,0 +1,21 @@
+<aura:component description="CCD_Step1" extends="c:SS_uiWizardPage">
+    <aura:attribute name="caseStatus" type="String" />
+    <aura:attribute name="caseOrigin" type="String" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+
+    <div class="slds-m-bottom--large slds-text-heading_large">Step 1 : Case Status &amp; Origin</div>
+    <div class="slds-form slds-form_compound">
+        <fieldset class="slds-form-element">
+            <div class="slds-form-element">
+                <label class="slds-form-element__label">Case Status</label>
+                <ui:inputText value="{!v.caseStatus}" required="false" class="slds-input" />
+            </div>
+        </fieldset>
+        <fieldset class="slds-form-element">
+            <div class="slds-form-element">
+                <label class="slds-form-element__label">Case Origin</label>
+                <ui:inputText value="{!v.caseOrigin}" required="false" class="slds-input" />
+            </div>
+        </fieldset>
+    </div>
+</aura:component>

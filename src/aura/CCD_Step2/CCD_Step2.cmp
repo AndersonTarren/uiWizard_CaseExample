@@ -1,0 +1,29 @@
+<aura:component description="CCD_Step2" extends="c:SS_uiWizardPage">
+    <aura:attribute name="caseSubject" type="String" />
+    <aura:attribute name="caseDescription" type="String" />
+    <aura:attribute name="caseComments" type="String" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <div class="slds-m-bottom--large slds-text-heading_large">Step 2 : Case Subject, Description and Comments</div>
+    <div class="slds-form slds-form_compound">
+        <fieldset class="slds-form-element">
+            <div class="slds-form-element">
+                <label class="slds-form-element__label">Case Subject</label>
+                <ui:inputText value="{!v.caseSubject}" required="false" class="slds-input" />
+            </div>
+        </fieldset>
+        <fieldset class="slds-form-element">
+            <div class="slds-form-element">
+                <label class="slds-form-element__label">Case Description</label>
+                <ui:inputTextArea value="{!v.caseDescription}" required="false" class="slds-input"/>
+            </div>
+        </fieldset>
+        <fieldset class="slds-form-element">
+            <div class="slds-form-element">
+                <label class="slds-form-element__label">Case Comments</label>
+                <ui:inputTextArea value="{!v.caseComments}" required="false" class="slds-input"/>
+            </div>
+        </fieldset>
+    </div>
+</aura:component>
